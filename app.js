@@ -60,7 +60,7 @@ let playRound = function (playerSelection, computerSelection) {
 let game = function () {
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("What do you pick, Paper,Rock or Scissors?").toLowerCase();
-    if (playerSelection != "rock" || playerSelection != "rock" || playerSelection != "rock") {
+    if (playerSelection != "rock" || playerSelection != "paper" || playerSelection != "scissors") {
       playerSelection = prompt("Invalid selection please select Paper,Rock or Scissors?").toLowerCase();
     }
     //player picks
