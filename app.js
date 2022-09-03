@@ -6,6 +6,7 @@ let paperImage = "      _.--._  _.--._\r\n,-=.-\":;:;:;\\\':;:;:;\"-._\r\n\\\\\\
 let playerScore = 0;
 let computerScore = 0;
 let gameRound = 1;
+const validSelections = ["rock", "paper", "scissors"];
 //deufalt score
 let computerPlay = function () {
   let randomNumber = Math.floor((Math.random() * 3 + 1));
@@ -60,11 +61,12 @@ let playRound = function (playerSelection, computerSelection) {
 let game = function () {
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("What do you pick, Paper,Rock or Scissors?").toLowerCase();
-    if (playerSelection != "rock" || playerSelection != "paper" || playerSelection != "scissors") {
-      playerSelection = prompt("Invalid selection please select Paper,Rock or Scissors?").toLowerCase();
-    }
-    //player picks
-    console.log(playRound(playerSelection, computerSelection));
+    if (validSelections.includes(playerSelection) === false) {
+      alert("Please pick 'rock', 'paper' or 'scissors");
+      i--;
+    } else
+      //player picks and input checked
+      console.log(playRound(playerSelection, computerSelection));
     //game auto plays
   }
   if (computerScore > playerScore) {
