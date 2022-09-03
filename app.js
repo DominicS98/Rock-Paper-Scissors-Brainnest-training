@@ -47,7 +47,7 @@ let playRound = function (playerSelection, computerSelection) {
     console.log(`Round ${gameRound}\nUser picked:\n${scissorImage}\n and the computer got: \n${paperImage}\n Player Won!`);
     gameRound++;
     playerScore++;
-  } if (playerSelection === "scissors " && computerSelection === "scissors") {
+  } if (playerSelection === "scissors" && computerSelection === "scissors") {
     console.log(`Round ${gameRound}\nUser picked:\n${scissorImage}\n and the computer got: \n${scissorImage}\n It's a tie!`);
     gameRound++;
   } if (playerSelection === "scissors" && computerSelection === "rock") {
